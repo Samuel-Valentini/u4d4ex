@@ -1,4 +1,4 @@
-package dipendente;
+package personale.dipendente;
 
 public class DipendenteFullTime extends Dipendente {
     public DipendenteFullTime(String matricola, double stipendio, Dipartimento dipartimento) {

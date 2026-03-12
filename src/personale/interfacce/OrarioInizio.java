@@ -1,4 +1,4 @@
-package interfacce;
+package personale.interfacce;
 
 public enum OrarioInizio {
     MATTINA,

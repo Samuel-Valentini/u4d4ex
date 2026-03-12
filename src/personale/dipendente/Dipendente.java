@@ -1,7 +1,7 @@
-package dipendente;
+package personale.dipendente;
 
-import interfacce.Check;
-import interfacce.OrarioInizio;
+import personale.interfacce.Check;
+import personale.interfacce.OrarioInizio;
 
 public abstract class Dipendente implements Check {
     private final String matricola;

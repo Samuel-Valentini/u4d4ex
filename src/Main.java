@@ -1,7 +1,7 @@
-import dipendente.*;
-import interfacce.Check;
-import interfacce.OrarioInizio;
-import volontario.Volontario;
+import personale.dipendente.*;
+import personale.interfacce.Check;
+import personale.interfacce.OrarioInizio;
+import personale.volontario.Volontario;
 
 import java.time.LocalDate;
 import java.util.Locale;

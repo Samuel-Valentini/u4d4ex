@@ -1,8 +1,8 @@
-package volontario;
+package personale.volontario;
 
-import dipendente.Dipartimento;
-import interfacce.Check;
-import interfacce.OrarioInizio;
+import personale.dipendente.Dipartimento;
+import personale.interfacce.Check;
+import personale.interfacce.OrarioInizio;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
