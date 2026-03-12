@@ -27,7 +27,6 @@ public class Main {
 
         Random random = new Random();
 
-
         for (Check check : checked) {
 
             int chooser = random.nextInt(4);
@@ -47,9 +46,6 @@ public class Main {
                     check.checkIn(OrarioInizio.NOTTE);
                     break;
             }
-
-
         }
-
     }
 }
