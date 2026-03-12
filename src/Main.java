@@ -5,6 +5,7 @@ import personale.volontario.Volontario;
 
 import java.time.LocalDate;
 import java.util.Locale;
+import java.util.Random;
 
 public class Main {
     static void main(String[] args) {
@@ -24,8 +25,30 @@ public class Main {
 
         Check[] checked = {gino, pino, ciro, mario, aldo};
 
+        Random random = new Random();
+
+
         for (Check check : checked) {
-            check.checkIn(OrarioInizio.POMERIGGIO);
+
+            int chooser = random.nextInt(4);
+
+            switch (chooser) {
+
+                case 0:
+                    check.checkIn(OrarioInizio.MATTINA);
+                    break;
+                case 1:
+                    check.checkIn(OrarioInizio.POMERIGGIO);
+                    break;
+                case 2:
+                    check.checkIn(OrarioInizio.SERA);
+                    break;
+                case 3:
+                    check.checkIn(OrarioInizio.NOTTE);
+                    break;
+            }
+
+
         }
 
     }
