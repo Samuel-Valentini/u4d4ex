@@ -18,10 +18,13 @@ public class Main {
         Volontario aldo = new Volontario("Aldo Bianchi", LocalDate.of(1987, 4, 1), "marketing expert", Dipartimento.AMMINISTRAZIONE);
 
         Dipendente[] dipendenti = {gino, pino, ciro};
-
+        double sum = 0;
         for (Dipendente dipendente : dipendenti) {
             System.out.println("La matricola è " + dipendente.getMatricola() + " il salario annuale è " + String.format(Locale.ITALY, "%,.2f", dipendente.calculateSalary()) + " €");
+            sum += dipendente.calculateSalary();
         }
+
+        System.out.println("I salari totali annuali erogati sono pari a " + String.format(Locale.ITALY, "%,.2f", sum) + " €");
 
         Check[] checked = {gino, pino, ciro, mario, aldo};
 
