@@ -1,6 +1,9 @@
-package Dipendente;
+package dipendente;
 
-public abstract class Dipendente {
+import interfacce.Check;
+import interfacce.OrarioInizio;
+
+public abstract class Dipendente implements Check {
     private final String matricola;
     private double stipendio;
     private Dipartimento dipartimento;
@@ -29,5 +32,10 @@ public abstract class Dipendente {
 
     public double calculateSalary() {
         return getStipendio() * 12;
+    }
+
+    @Override
+    public void checkIn(OrarioInizio orarioInizio) {
+        System.out.println(this.matricola + " dipartimento: " + this.dipartimento + " - Turno di inizio: " + orarioInizio);
     }
 }

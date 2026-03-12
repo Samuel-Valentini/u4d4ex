@@ -1,4 +1,4 @@
-package Dipendente;
+package dipendente;
 
 public enum Dipartimento {
     PRODUZIONE,

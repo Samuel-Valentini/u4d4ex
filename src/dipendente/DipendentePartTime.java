@@ -1,4 +1,4 @@
-package Dipendente;
+package dipendente;
 
 
 public class DipendentePartTime extends Dipendente {

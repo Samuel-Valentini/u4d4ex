@@ -1,5 +1,9 @@
-import Dipendente.*;
+import dipendente.*;
+import interfacce.Check;
+import interfacce.OrarioInizio;
+import volontario.Volontario;
 
+import java.time.LocalDate;
 import java.util.Locale;
 
 public class Main {
@@ -9,11 +13,20 @@ public class Main {
         DipendenteFullTime gino = new DipendenteFullTime("000001", 3500.00, Dipartimento.AMMINISTRAZIONE);
         DipendentePartTime pino = new DipendentePartTime("000002", 25.00, Dipartimento.PRODUZIONE, 26);
         Dirigente ciro = new Dirigente("000003", 100000, Dipartimento.VENDITE);
+        Volontario mario = new Volontario("Mario Rossi", LocalDate.of(1980, 1, 1), "martellatore", Dipartimento.PRODUZIONE);
+        Volontario aldo = new Volontario("Aldo Bianchi", LocalDate.of(1987, 4, 1), "marketing expert", Dipartimento.AMMINISTRAZIONE);
 
         Dipendente[] dipendenti = {gino, pino, ciro};
 
         for (Dipendente dipendente : dipendenti) {
             System.out.println("La matricola è " + dipendente.getMatricola() + " il salario annuale è " + String.format(Locale.ITALY, "%,.2f", dipendente.calculateSalary()) + " €");
         }
+
+        Check[] checked = {gino, pino, ciro, mario, aldo};
+
+        for (Check check : checked) {
+            check.checkIn(OrarioInizio.POMERIGGIO);
+        }
+
     }
 }
